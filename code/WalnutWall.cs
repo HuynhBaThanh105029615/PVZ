@@ -13,7 +13,7 @@ namespace PVZ.code
 
         public WalnutWall(int x, int y) : base(x, y, PlantType.Walnut)
         {
-            _health = 200; // Higher health for tanking
+            _health = 500; // Higher health for tanking
         }
 
         public override void Update(List<Pea> peas, List<Sun> suns) 
@@ -33,7 +33,7 @@ namespace PVZ.code
         public override void TakeDamage(int damage)
         {
             _health -= damage;
-            if (Health <= 0)
+            if (_health <= 0)
             {
                 IsAlive = false;
             }
